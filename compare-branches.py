@@ -47,6 +47,7 @@ def development_has_changes_from_master():
     commit_found_array = []
 
     for commit_master in git_log_master:
+        # if all elements in the array are False, commit wasn't found
         commit_not_found = not True in commit_found_array
 
         if(commit_found_array and commit_not_found):
