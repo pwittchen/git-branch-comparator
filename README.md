@@ -18,4 +18,4 @@ Integration with Jenkins
 ------------------------
 
 This script can be executed as a command line script in a Jenkins CI job.
-When, changes from *master* won't be merged into *development*, job will fail.
+When, changes from *master* won't be merged into *development*, job will fail. In opposite case, job should finish with a success.
