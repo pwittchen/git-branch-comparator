@@ -21,7 +21,7 @@ def git_log():
     return log
 
 def git_checkout(branch_name):
-    p = Popen('git checkout "%s"' % branch_name, shell=True, stdout=PIPE)
+    Popen('git checkout "%s"' % branch_name, shell=True, stdout=PIPE)
 
 def commits_are_same(commit_one, commit_two):
     same_email = commit_one['author_email'] == commit_two['author_email']
