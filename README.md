@@ -1,5 +1,5 @@
 # git-branch-comparator
-Python script, which checks if *development* branch has all changes from *master* branch on Git repository
+Python script, which checks if *development* branch has all changes from *master* branch in Git repository
 
 Description
 -----------
