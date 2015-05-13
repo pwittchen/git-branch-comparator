@@ -50,7 +50,7 @@ def development_has_changes_from_master():
         commit_not_found = not True in commit_found_array
 
         if(commit_found_array and commit_not_found):
-            print "ERROR: \'master\' needs to be merged to \'development\'"
+            print "ERROR: \'master\' needs to be merged into \'development\'"
             return False
 
         for commit_development in git_log_development:
