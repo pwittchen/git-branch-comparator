@@ -1,3 +1,5 @@
+#!/usr/bin/python -u
+
 # This script checks, if 'development' branch has all changes from 'master' branch on Git
 # 'master' can have some changes, which 'development' does not have in case of hot fixes on 'master'
 
