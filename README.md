@@ -12,7 +12,7 @@ This Python script checks, if all changes made on *master* branch were also merg
 Usage
 -----
 
-`$ python compare-branches.py <path_to_your_git_repository>`
+`$ ./compare-branches.py <path_to_your_git_repository>`
 
 Integration with Jenkins
 ------------------------
