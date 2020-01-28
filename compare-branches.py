@@ -34,15 +34,15 @@ def commits_are_same(commit_one, commit_two):
 def development_has_changes_from_master():
     # we need to add sleeps in this method
     # to read data from git correctly
-    print 'Switching to \'master\'...'
+    print ('Switching to \'master\'...')
     git_checkout('master')
-    print 'Reading git log...'
+    print ('Reading git log...')
     sleep(2)
     git_log_master = git_log()
-    print 'Switching to \'development\'...'
+    print ('Switching to \'development\'...')
     sleep(2)
     git_checkout('development')
-    print 'Reading git log...'
+    print ('Reading git log...')
     sleep(2)
     git_log_development = git_log()
 
@@ -53,7 +53,7 @@ def development_has_changes_from_master():
         commit_not_found = not True in commit_found_array
 
         if(commit_found_array and commit_not_found):
-            print "ERROR: \'master\' needs to be merged into \'development\'"
+            print ("ERROR: \'master\' needs to be merged into \'development\'")
             return False
 
         for commit_development in git_log_development:
@@ -63,19 +63,19 @@ def development_has_changes_from_master():
     return True
 
 def fail_jenkins_job():
-    print 'Failing job...'
+    print ('Failing job...')
     sys.exit(-1) # when script will exit with non-zero status, jenkins job should fail
 
 def compare_branches_in_repository():
     if len(sys.argv) == 1:
-        print 'ERROR: path to repository is not defined'
+        print ('ERROR: path to repository is not defined')
         return
 
     path_to_repository = sys.argv[1]
     os.chdir(path_to_repository)
 
     if development_has_changes_from_master():
-        print 'SUCCESS: \'development\' has all changes from \'master\''
+        print ('SUCCESS: \'development\' has all changes from \'master\'')
     else:
         fail_jenkins_job()
 
